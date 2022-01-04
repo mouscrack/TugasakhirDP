@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+string makan[4] = {"1.nasi goreng","2.mie rebus","3.ayam geprek","4.ayam crispy"};
+string minum[4] = {"1.air mineral","2.es jeruk","3.es teh","4.lemon tea"};
+void pesanan()
+{
+	cout<<"Menu makan :\n";
+	for (int a=0; a<4; a++){
+	cout<<makan[a]<<endl;
+	}
+	cout<<"\nMenu minum :\n";
+	for (int b=0; b<4; b++){
+		cout<<minum[b]<<endl;
+		}
+}
+void menu (){
+	int s,t,u=15000,v=5000;
+	cout<<"Mau makan apa [1-4] ? : ";cin>>s;
+	cout<<"Mau minum apa [1-4] ? : ";cin>>t;
+	cout<<endl;
+	switch (s){
+		case 1 :
+		cout<<"Pesanan pertama : "<<makan[0]<<" = Rp"<<u;
+		break;
+		case 2 :
+		cout<<"Pesanan pertama : "<<makan[1]<<" = Rp"<<u;
+		break;
+		case 3 :
+		cout<<"Pesanan pertama : "<<makan[2]<<" = Rp"<<u;
+		break;
+		case 4 :
+		cout<<"Pesanan pertama : "<<makan[3]<<" = Rp"<<u;
+		break;
+	}
+	cout<<endl;
+	switch (t) {
+		case 1 :
+		cout<<"Pesanan kedua : "<<minum[0]<<" = Rp"<<v;
+		break;
+		case 2 :
+		cout<<"Pesanan kedua : "<<minum[1]<<" = Rp"<<v;
+		break;
+		case 3 :
+		cout<<"Pesanan kedua : "<<minum[2]<<" = Rp"<<v;
+		break;
+		case 4 :
+		cout<<"Pesanan kedua : "<<minum[3]<<" = Rp"<<v;
+		break;
+	}
+	cout<<endl;
+	cout<<"\n\tTotal = Rp"<<u+v;
+}
+int main (){
+	char pil;
+	cout<<"\t==============SELAMAT DATANG DI WARUNG KENYANG==============\n";
+	cout<<"\t-------Makanan serba Rp15.000 & Minuman serba Rp5.000-------\n";
+	    cout<<endl;
+	    do{
+	    	pesanan();
+	    	menu();
+	    	cout<<endl;
+	    	cout<<"\nIngin melakukan pemesanan lagi? (y/n : "; cin>>pil;
+		}
+		while (pil=='y' || pil=='y');
+		cout<<"\n\t-------------TERIMA KASIH DAN MAMPIR LAGI YA-------------";
+		
+		
+		return 0;
+}
